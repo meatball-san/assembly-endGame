@@ -115,7 +115,7 @@ export default function Main() {
       <header>
         <h1>Assembly: Endgame</h1>
         <p>
-          Guess the world within 8 attempts to keep the programming world safe
+          Guess the world within 8 attempts to keep the programming word safe
           from Assembly!
         </p>
       </header>
