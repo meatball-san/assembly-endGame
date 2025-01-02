@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #262626;
+  color: #d9d9d9;
+  padding: 20px;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header > h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #f9f4da;
+  margin: 0;
+}
+
+header > p {
+  font-size: 0.887rem;
+  max-width: 300px;
+  color: #8e8e8e;
+  margin: 10px;
+}
+
+section.game-status {
+  color: #f9f4da;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0px;
+
+  border-radius: 4px;
+  margin-block-start: 30px;
+  width: 100%;
+  max-width: 350px;
+  min-height: 60px;
+}
+
+section.game-status.win {
+  background-color: #10a95b;
+}
+
+section.game-status.lost {
+  background-color: rgb(228, 72, 72);
+}
+
+section.game-status.farewell {
+  background-color: #7a5ea7;
+  border: 1px dashed #323232;
+}
+
+section.game-status > h2 {
+  font-size: 1.25rem;
+  margin: 5px;
+}
+
+section.game-status > p {
+  margin: 5px;
+  font-size: 0.9rem;
+}
+
+section.game-status > p.farewell-message {
+  margin: 5px;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+section.game-status-lost {
+  background-color: rgb(228, 67, 67) !important;
+}
+
+.languages-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+
+  max-width: 350px;
+  margin-top: 50px;
+}
+
+.languages-container > span {
+  font-size: 0.875rem;
+  padding: 5px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.languages-container > span.dead-key::before {
+  content: "💀";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.current-word {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  gap: 2px;
+}
+
+.current-word > span {
+  background-color: #323232;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 40px;
+  width: 40px;
+
+  font-size: 1.125rem;
+
+  border-bottom: 2px solid #f9f4da;
+}
+
+.current-word > span.missed-letters {
+  color: #EC5D49;
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+
+  max-width: 400px;
+  margin-top: 36px;
+}
+
+.keyboard > button {
+  background-color: #fcba29;
+
+  height: 35px;
+  width: 35px;
+
+  border: 1px solid #d7d7d7;
+  border-radius: 3.5px;
+
+  cursor: pointer;
+}
+
+.keyboard > button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.new-game-button {
+  background-color: rgb(26, 172, 221);
+
+  margin-top: 30px;
+  padding: 6px 40px;
+
+  border: none;
+  border-radius: 3px;
+
+  cursor: pointer;
+}
+
+.keyboard > .correct-choice {
+  background-color: #10a95b;
+}
+
+.keyboard > .wrong-choice {
+  background-color: #ec5d49;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
